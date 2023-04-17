@@ -35,6 +35,9 @@ public class PlayerMoney : MonoBehaviour
                 _indexUI = 1;
                 break;
         }
+
+        if (_moneyText.Length > 0) ;
+            //_moneyText[_indexUI].text = "0";
     }
 
     private void IncreaseMoney(int value)
@@ -56,7 +59,7 @@ public class PlayerMoney : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (_moneyText.Length > 0) 
-            _moneyText[_indexUI].text = Money.ToString();
+        if (_moneyText.Length > 0) ;
+            //_moneyText[_indexUI].text = Money.ToString();
     }
 }

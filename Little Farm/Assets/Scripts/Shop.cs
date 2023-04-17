@@ -40,6 +40,11 @@ public class Shop : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        SetUI();
+    }
+
     private void SetUI()
     {
         switch (YandexSDK.YaSDK.instance.currentPlatform)
@@ -55,7 +60,7 @@ public class Shop : MonoBehaviour
                 break;
         }
 
-        UIToEnable[_indexUI].SetActive(false);
+        //UIToEnable[_indexUI].SetActive(false);
     }
 
     public void TrySellAllPlants()

@@ -11,15 +11,16 @@ public abstract class Plant : MonoBehaviour
     private Vector3 _startScaleVector;
     private float _maxScaleValue;
     private float _scaleValue;
-    private bool _isSet;
     private bool _canSet;
     private bool _canGet;
 
     public bool IsGrown { get; private set; }
     public bool IsGet { get; private set; }
+    public bool IsSet { get; private set; }
 
     public static event Action OnPlantGrown;
     public static event Action OnPlantGet;
+    public static event Action OnPlantSet;
 
     private void OnEnable()
     {
@@ -43,7 +44,7 @@ public abstract class Plant : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_isSet && !IsGrown)
+        if (IsSet && !IsGrown)
             Grow();
     }
 
@@ -61,10 +62,12 @@ public abstract class Plant : MonoBehaviour
     {
         if (_canSet)
         {
-            _isSet = true;
+            IsSet = true;
             _canSet = false;
             IsGet = false;
             transform.localScale = _startScaleVector;
+
+            OnPlantSet?.Invoke();
         }
     }
 
@@ -72,7 +75,7 @@ public abstract class Plant : MonoBehaviour
     {
         if (_canGet)
         {
-            _isSet = false;
+            IsSet = false;
             _canGet = false;
             IsGrown = false;
             IsGet = true;
