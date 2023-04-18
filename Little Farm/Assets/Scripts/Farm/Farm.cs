@@ -8,12 +8,14 @@ public class Farm : MonoBehaviour
     [SerializeField] private Plant[] _fruits;
 
     private PlayerFarming _playerFarming;
-    private bool _allSet;
-    private bool _allGet;
+    private bool _playerIsHere;
 
     public event Action OnAllPlantsGrown;
     public event Action OnAllPlantsGet;
 
+    public bool AllSet { get; private set; }
+    public bool AllGrown { get; private set; }
+    public bool AllGet { get; private set; }
     public bool CanSet { get; private set; }
     public bool CanGet { get; private set; }
 
@@ -37,10 +39,18 @@ public class Farm : MonoBehaviour
         {
             _playerFarming = playerFarming;
 
-            if (!_allSet)
+            if (AllGet || !AllSet)
                 playerFarming.ActiveSetButton(true);
-            else if (!_allGet && _allSet)
+            if (AllGrown)
                 playerFarming.ActiveGetButton(true);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.TryGetComponent(out PlayerFarming playerFarming))
+        {
+            _playerIsHere = true;
         }
     }
 
@@ -48,6 +58,7 @@ public class Farm : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerFarming playerFarming))
         {
+            _playerIsHere = false;
             playerFarming.ActiveSetButton(false);
             playerFarming.ActiveGetButton(false);
         }
@@ -60,7 +71,8 @@ public class Farm : MonoBehaviour
                 return;
         }
 
-        _allSet = true;
+        AllGet = false;
+        AllSet = true;
         CanSet = false;
     }
 
@@ -74,7 +86,9 @@ public class Farm : MonoBehaviour
 
         CanGet = false;
         CanSet = false;
-        _playerFarming.ActiveGetButton(true);
+        AllSet = false;
+        AllGrown = true;
+        if (_playerIsHere) _playerFarming.ActiveGetButton(true);
     }
 
 
@@ -86,10 +100,11 @@ public class Farm : MonoBehaviour
                 return;
         }
 
-        _allGet = true;
-        _allSet = false;
+        AllGet = true;
+        AllSet = false;
+        AllGrown = false;
         CanGet = false;
-        _playerFarming.ActiveSetButton(true);
+        if (_playerIsHere) _playerFarming.ActiveSetButton(true);
     }
 
     public void SetPlants()

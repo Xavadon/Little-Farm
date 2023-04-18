@@ -94,11 +94,11 @@ public class PlayerFarming : MonoBehaviour
 
     public void ActiveSetButton(bool value)
     {
-        _setPlantsButton[_indexUI].gameObject.SetActive(value);
+        if(_setPlantsButton[_indexUI] != null) _setPlantsButton[_indexUI].gameObject.SetActive(value);
     }
 
     public void ActiveGetButton(bool value)
     {
-        _getPlantsButton[_indexUI].gameObject.SetActive(value);
+        if (_setPlantsButton[_indexUI] != null) _getPlantsButton[_indexUI].gameObject.SetActive(value);
     }
 }
