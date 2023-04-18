@@ -33,6 +33,7 @@ public class FarmState : State
     private void Start()
     {
         _waitSeconds = new WaitForSeconds(_waitBeforeMove);
+        _animatorHandler.animator.SetBool("IsMoving", true);
     }
 
     private void Update()

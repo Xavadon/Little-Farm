@@ -6,22 +6,22 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Collider))]
 public class PlayerFarming : MonoBehaviour
 {
-    [SerializeField] private AnimatorHandler _animatorHandler;
+    [SerializeField] protected AnimatorHandler _animatorHandler;
     [SerializeField] private Button[] _setPlantsButton;
     [SerializeField] private Button[] _getPlantsButton;
 
-    private List<Plant> _fruits = new List<Plant>(0);
+    protected List<Plant> _fruits = new List<Plant>(0);
     private bool _canSet;
     private bool _canGet;
-    private int _indexUI;
+    protected int _indexUI;
 
-    private void Start()
+    protected void Start()
     {
         StartCoroutine(InteractWithPlants());
         GetUI();
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent(out Plant fruit))
         {
@@ -29,12 +29,12 @@ public class PlayerFarming : MonoBehaviour
         }
         if (other.TryGetComponent(out Farm farm))
         {
-            _setPlantsButton[_indexUI].onClick.AddListener(farm.SetPlants);
-            _getPlantsButton[_indexUI].onClick.AddListener(farm.GetPlants);
+            if (_setPlantsButton.Length > 0) _setPlantsButton[_indexUI].onClick.AddListener(farm.SetPlants);
+            if (_setPlantsButton.Length > 0) _getPlantsButton[_indexUI].onClick.AddListener(farm.GetPlants);
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    protected void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent(out Farm farm))
         {
@@ -43,7 +43,7 @@ public class PlayerFarming : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         if (other.TryGetComponent(out Plant fruit))
         {
@@ -58,7 +58,7 @@ public class PlayerFarming : MonoBehaviour
         }
     }
 
-    private void GetUI()
+    protected void GetUI()
     {
         switch (YandexSDK.YaSDK.instance.currentPlatform)
         {
@@ -74,7 +74,7 @@ public class PlayerFarming : MonoBehaviour
         }
     }
 
-    private IEnumerator InteractWithPlants()
+    protected virtual IEnumerator InteractWithPlants()
     {
         if (_fruits.Count > 0 && _canSet || _canGet)
         {
@@ -94,11 +94,11 @@ public class PlayerFarming : MonoBehaviour
 
     public void ActiveSetButton(bool value)
     {
-        if(_setPlantsButton[_indexUI] != null) _setPlantsButton[_indexUI].gameObject.SetActive(value);
+        if(_setPlantsButton.Length > 0) _setPlantsButton[_indexUI].gameObject.SetActive(value);
     }
 
     public void ActiveGetButton(bool value)
     {
-        if (_setPlantsButton[_indexUI] != null) _getPlantsButton[_indexUI].gameObject.SetActive(value);
+        if (_setPlantsButton.Length > 0) _getPlantsButton[_indexUI].gameObject.SetActive(value);
     }
 }

@@ -9,6 +9,7 @@ public class Farm : MonoBehaviour
 
     private PlayerFarming _playerFarming;
     private bool _playerIsHere;
+    private bool _workerIsHere;
 
     public event Action OnAllPlantsGrown;
     public event Action OnAllPlantsGet;
@@ -50,8 +51,14 @@ public class Farm : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerFarming playerFarming))
         {
-            _playerIsHere = true;
+            if (other.TryGetComponent(out Worker worker))
+            {
+                _workerIsHere = true;
+            }
+            else 
+                _playerIsHere = true;
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -62,7 +69,18 @@ public class Farm : MonoBehaviour
             playerFarming.ActiveSetButton(false);
             playerFarming.ActiveGetButton(false);
         }
+
+        if (other.TryGetComponent(out Worker worker))
+        {
+            _workerIsHere = false;
+        }
     }
+
+    private void Start()
+    {
+        AllGet = true;
+    }
+
     private void CheckPlantsSet()
     {
         for (int i = 0; i < _fruits.Length; i++)
@@ -88,6 +106,7 @@ public class Farm : MonoBehaviour
         CanSet = false;
         AllSet = false;
         AllGrown = true;
+        if (_workerIsHere) OnAllPlantsGrown?.Invoke();
         if (_playerIsHere) _playerFarming.ActiveGetButton(true);
     }
 
@@ -104,6 +123,7 @@ public class Farm : MonoBehaviour
         AllSet = false;
         AllGrown = false;
         CanGet = false;
+        if (_workerIsHere) OnAllPlantsGet?.Invoke();
         if (_playerIsHere) _playerFarming.ActiveSetButton(true);
     }
 
