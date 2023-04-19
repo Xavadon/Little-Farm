@@ -28,7 +28,7 @@ public class Isle : MonoBehaviour
     {
         if(other.TryGetComponent(out PlayerMoney playerMoney))
         {
-            TryBuyIsland();
+            TryBuyIsland(playerMoney);
         }
     }
 
@@ -37,10 +37,12 @@ public class Isle : MonoBehaviour
         if(_enableGround) EnableGround();
     }
 
-    private void TryBuyIsland()
+    private void TryBuyIsland(PlayerMoney playerMoney)
     {
-        if (PlayerMoney.Money >= _price)
+        if (PlayerMoney.Money >= _price && _canvas.gameObject.activeSelf)
         {
+            playerMoney.DecreaseMoney(_price);
+
             _isBought = true;
             _enableGround = true;
             _canvas.gameObject.SetActive(false);
@@ -52,7 +54,7 @@ public class Isle : MonoBehaviour
 
             for (int i = 0; i < _neighbours.Length; i++)
             {
-                if (_neighbours != null) _neighbours[i].EnableCanvas();
+                if (_neighbours.Length > 0) _neighbours[i].EnableCanvas();
             }
         }
     }

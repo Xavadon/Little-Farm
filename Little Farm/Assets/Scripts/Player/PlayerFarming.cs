@@ -53,8 +53,8 @@ public class PlayerFarming : MonoBehaviour
         {
             _canSet = false;
             _canGet = false;
-            _setPlantsButton[_indexUI].onClick.RemoveListener(farm.SetPlants);
-            _getPlantsButton[_indexUI].onClick.RemoveListener(farm.GetPlants);
+            if (_setPlantsButton.Length > 0) _setPlantsButton[_indexUI].onClick.RemoveListener(farm.SetPlants);
+            if (_setPlantsButton.Length > 0) _getPlantsButton[_indexUI].onClick.RemoveListener(farm.GetPlants);
         }
     }
 
@@ -78,7 +78,7 @@ public class PlayerFarming : MonoBehaviour
     {
         if (_fruits.Count > 0 && _canSet || _canGet)
         {
-            if (_animatorHandler != null)
+            if (_animatorHandler != null && !_animatorHandler.animator.GetBool("IsAttacking"))
                 _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
 
             foreach (var item in _fruits)
@@ -87,8 +87,13 @@ public class PlayerFarming : MonoBehaviour
                 item.GetPlant();
             }
         }
+        else
+        {
+            if (_animatorHandler != null)
+                _animatorHandler.animator.SetBool("IsAttacking", false);
+        }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.15f);
         StartCoroutine(InteractWithPlants());
     }
 

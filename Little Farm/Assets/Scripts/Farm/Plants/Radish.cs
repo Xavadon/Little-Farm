@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Radish : Plant
 {
-    protected override void AddPlantToInventory()
+    protected override void AddPlantToInventory(PlayerFarming playerFarming)
     {
         PlayerPlantsInventory.RadishCount = 1;
     }

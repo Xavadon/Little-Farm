@@ -14,6 +14,11 @@ public abstract class Plant : MonoBehaviour
     private bool _canSet;
     private bool _canGet;
 
+    protected PlayerFarming _playerFarming;
+    protected WorkerFarming _workerFarming;
+    protected bool _playerIsHere;
+    protected bool _workerIsHere;
+
     public bool IsGrown { get; private set; }
     public bool IsGet { get; private set; }
     public bool IsSet { get; private set; }
@@ -32,6 +37,45 @@ public abstract class Plant : MonoBehaviour
     {
         _parentFarm.OnAllPlantsGrown -= CanGetPlants;
         _parentFarm.OnAllPlantsGet -= CanSetPlants;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out PlayerFarming playerFarming))
+        {
+            if (other.TryGetComponent(out WorkerFarming workerFarming))
+                _workerFarming = workerFarming;
+            else
+                _playerFarming = playerFarming;
+        }
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.TryGetComponent(out PlayerFarming playerFarming))
+        {
+            if (other.TryGetComponent(out WorkerFarming workerFarming))
+                _workerIsHere = true;
+            else
+                _playerIsHere = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent(out PlayerFarming playerFarming))
+        {
+            if (other.TryGetComponent(out WorkerFarming workerFarming))
+            {
+                _workerIsHere = false;
+                _workerFarming = null;
+            }
+            else
+            {
+                _playerIsHere = false;
+                _playerFarming = null;
+            }
+        }
     }
 
     private void Start()
@@ -81,12 +125,16 @@ public abstract class Plant : MonoBehaviour
             IsGet = true;
             transform.localScale = Vector3.zero;
 
-            AddPlantToInventory();
+            if (_workerIsHere)
+                AddPlantToInventory(_workerFarming);
+            else if (_playerIsHere)
+                AddPlantToInventory(_playerFarming);
+
             OnPlantGet?.Invoke();
         }
     }
 
-    protected abstract void AddPlantToInventory();
+    protected abstract void AddPlantToInventory(PlayerFarming playerFarming);
 
     private void Grow()
     {

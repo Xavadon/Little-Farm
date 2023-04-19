@@ -20,7 +20,7 @@ public class WorkerFarming : PlayerFarming
     {
         if (_fruits.Count > 0 && _allGet || _allGrown)
         {
-            if (_animatorHandler != null)
+            if (_animatorHandler != null && !_animatorHandler.animator.GetBool("IsAttacking"))
                 _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
 
             foreach (var item in _fruits)
@@ -29,8 +29,13 @@ public class WorkerFarming : PlayerFarming
                 item.GetPlant();
             }
         }
+        else
+        {
+            if (_animatorHandler != null)
+                _animatorHandler.animator.SetBool("IsAttacking", false);
+        }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.15f);
         StartCoroutine(InteractWithPlants());
     }
 

@@ -40,10 +40,10 @@ public class Farm : MonoBehaviour
         {
             _playerFarming = playerFarming;
 
-            if (AllGet || !AllSet)
-                playerFarming.ActiveSetButton(true);
             if (AllGrown)
                 playerFarming.ActiveGetButton(true);
+            else if (AllGet || !AllSet)
+                playerFarming.ActiveSetButton(true);
         }
     }
 
@@ -83,48 +83,64 @@ public class Farm : MonoBehaviour
 
     private void CheckPlantsSet()
     {
-        for (int i = 0; i < _fruits.Length; i++)
+        if (_playerIsHere || _workerIsHere)
         {
-            if (!_fruits[i].IsSet)
+            if (AllGrown)
                 return;
-        }
 
-        AllGet = false;
-        AllSet = true;
-        CanSet = false;
+            for (int i = 0; i < _fruits.Length; i++)
+            {
+                if (!_fruits[i].IsSet)
+                    return;
+            }
+
+            AllGet = false;
+            AllSet = true;
+            CanSet = false;
+        }
     }
 
     private void CheckPlantsGrown()
     {
-        for (int i = 0; i < _fruits.Length; i++)
+        if (_playerIsHere || _workerIsHere)
         {
-            if (!_fruits[i].IsGrown)
+            if (AllGet)
                 return;
-        }
 
-        CanGet = false;
-        CanSet = false;
-        AllSet = false;
-        AllGrown = true;
-        if (_workerIsHere) OnAllPlantsGrown?.Invoke();
-        if (_playerIsHere) _playerFarming.ActiveGetButton(true);
+            for (int i = 0; i < _fruits.Length; i++)
+            {
+                if (!_fruits[i].IsGrown)
+                    return;
+            }
+
+            CanGet = false;
+            CanSet = false;
+            AllSet = false;
+            AllGrown = true;
+            if (_workerIsHere) OnAllPlantsGrown?.Invoke();
+            if (_playerIsHere) _playerFarming.ActiveGetButton(true);
+        }
     }
 
 
     private void CheckPlantsGet()
     {
-        for (int i = 0; i < _fruits.Length; i++)
+        if (_playerIsHere || _workerIsHere)
         {
-            if (!_fruits[i].IsGet)
-                return;
-        }
 
-        AllGet = true;
-        AllSet = false;
-        AllGrown = false;
-        CanGet = false;
-        if (_workerIsHere) OnAllPlantsGet?.Invoke();
-        if (_playerIsHere) _playerFarming.ActiveSetButton(true);
+            for (int i = 0; i < _fruits.Length; i++)
+            {
+                if (!_fruits[i].IsGet)
+                    return;
+            }
+
+            AllGet = true;
+            AllSet = false;
+            AllGrown = false;
+            CanGet = false;
+            if (_workerIsHere) OnAllPlantsGet?.Invoke();
+            if (_playerIsHere) _playerFarming.ActiveSetButton(true);
+        }
     }
 
     public void SetPlants()

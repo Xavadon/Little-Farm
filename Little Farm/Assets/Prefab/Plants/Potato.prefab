@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1270722751986396678}
   - component: {fileID: 1270722751986396677}
   - component: {fileID: 1270722751986396676}
-  - component: {fileID: 1270722751986396672}
+  - component: {fileID: 3792259167795923596}
   m_Layer: 3
   m_Name: Potato
   m_TagString: Untagged
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bfd5e122b2d65a04ab53b1bc312c915b, type: 2}
+  - {fileID: 2100000, guid: 4dbe6f43a93f7314dbf0fd93503d7b3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1270722751986396672
+--- !u!114 &3792259167795923596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

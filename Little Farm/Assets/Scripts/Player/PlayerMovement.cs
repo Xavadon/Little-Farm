@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             _rigidbody.velocity = movementDirection;
         }
 
-        if (movementDirection != Vector3.zero)
+        if (movementDirection != Vector3.zero && !_animator.GetBool("IsAttacking"))
         {
             movementDirection.y = 0;
             var rotationDirection = Quaternion.LookRotation(movementDirection, Vector3.up);

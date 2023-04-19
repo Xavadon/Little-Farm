@@ -47,7 +47,7 @@ public class PlayerMoney : MonoBehaviour
         UpdateUI();
     }
 
-    private void DecreaseMoney(int value)
+    public void DecreaseMoney(int value)
     {
         if ((Money - value) >= 0)
         {

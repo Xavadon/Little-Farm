@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerPlantsInventory : MonoBehaviour
+public abstract class PlantsInventory : MonoBehaviour
 {
     private static int _wheatCount;
     private static int _carrotCount;
@@ -13,7 +13,7 @@ public class PlayerPlantsInventory : MonoBehaviour
     public static int WheatCount
     {
         get { return _wheatCount; }
-        set 
+        set
         {
             if (value >= 0)
                 _wheatCount += value;
