@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FarmState : State
+public class PathState : State
 {
     [Header("Exit States")]
     [SerializeField] private State _exitState;
 
     [Header("Ñomponents")]
-    [SerializeField] private WorkerPlantsInventory _workerPlantsInventory;
     [SerializeField] private AnimatorHandler _animatorHandler;
     [SerializeField] private NavMeshAgent _navMeshAgent;
     [SerializeField] private Transform _mainTransform;
@@ -40,14 +39,6 @@ public class FarmState : State
     private void Update()
     {
         MoveToWayPoint();
-        if(_workerPlantsInventory.WheatCount >= _workerPlantsInventory.MaxCount ||
-            _workerPlantsInventory.CarrotCount >= _workerPlantsInventory.MaxCount ||
-            _workerPlantsInventory.RadishCount >= _workerPlantsInventory.MaxCount ||
-            _workerPlantsInventory.PotatoCount >= _workerPlantsInventory.MaxCount)
-        {
-            _nextState = true;
-            //RunCurrentState();
-        }
     }
 
     private void MoveToWayPoint()
@@ -55,16 +46,12 @@ public class FarmState : State
         if (_wayPoints.Length == 0) return;
         else if (_wayPoints[0] == null) return;
 
-        if (_currentWayPoint >= _wayPoints.Length)
-            _currentWayPoint = 0;
-
-
         if (_canMove)
             _navMeshAgent.SetDestination(_wayPoints[_currentWayPoint].transform.position);
-            
+
         if (Vector3.Distance(_mainTransform.position, _wayPoints[_currentWayPoint].transform.position) <= _navMeshAgent.stoppingDistance)
         {
-            _currentWayPoint++;
+            _nextState = true;
             StartCoroutine(WaitBeforeMove());
         }
     }
@@ -89,7 +76,7 @@ public class FarmState : State
             _exitState.enabled = true;
             return _exitState;
         }
-        else 
+        else
             return this;
     }
 }
