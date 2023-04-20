@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 1831097629383386664, guid: 1b1ae2d1b4c18d142bcd46f62146bb41, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5caa8acceebbe8d439050b042e8ba84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 46a9cdd477d500843a2f3a7a6d683f41, type: 2}
     - target: {fileID: 4999738054259525735, guid: 1b1ae2d1b4c18d142bcd46f62146bb41, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7641670547861952538, guid: 1b1ae2d1b4c18d142bcd46f62146bb41, type: 3}
       propertyPath: m_VersionIndex
-      value: 1951
+      value: 1955
       objectReference: {fileID: 0}
     - target: {fileID: 7641670547861952538, guid: 1b1ae2d1b4c18d142bcd46f62146bb41, type: 3}
       propertyPath: m_SelectedEdges.Array.size
