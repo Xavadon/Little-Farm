@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlantsInventory : MonoBehaviour
+public class PlantsInventory : MonoBehaviour
 {
-    private static int _wheatCount;
-    private static int _carrotCount;
-    private static int _radishCount;
-    private static int _potatoCount;
+    protected int _wheatCount;
+    protected int _carrotCount;
+    protected int _radishCount;
+    protected int _potatoCount;
 
-    public static int WheatCount
+    public int WheatCount
     {
         get { return _wheatCount; }
         set
@@ -22,11 +22,12 @@ public abstract class PlantsInventory : MonoBehaviour
             else
                 throw new ArgumentException();
 
-            Debug.Log("Wheat: " + _wheatCount);
+            Debug.Log("Wheat: " + _wheatCount + " " + gameObject.name);
+            UpdateUI();
         }
     }
 
-    public static int CarrotCount
+    public int CarrotCount
     {
         get { return _carrotCount; }
         set
@@ -38,11 +39,12 @@ public abstract class PlantsInventory : MonoBehaviour
             else
                 throw new ArgumentException();
 
-            Debug.Log("Carrot: " + _carrotCount);
+            Debug.Log("Carrot: " + _carrotCount + " " + gameObject.name);
+            UpdateUI();
         }
     }
 
-    public static int RadishCount
+    public int RadishCount
     {
         get { return _radishCount; }
         set
@@ -54,11 +56,12 @@ public abstract class PlantsInventory : MonoBehaviour
             else
                 throw new ArgumentException();
 
-            Debug.Log("Radish: " + _radishCount);
+            Debug.Log("Radish: " + _radishCount + " " + gameObject.name);
+            UpdateUI();
         }
     }
 
-    public static int PotatoCount
+    public int PotatoCount
     {
         get { return _potatoCount; }
         set
@@ -70,7 +73,13 @@ public abstract class PlantsInventory : MonoBehaviour
             else
                 throw new ArgumentException();
 
-            Debug.Log("Potato: " + _potatoCount);
+            Debug.Log("Potato: " + _potatoCount + " " + gameObject.name);
+            UpdateUI();
         }
+    }
+
+    public virtual void UpdateUI()
+    {
+
     }
 }

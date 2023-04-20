@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Potato : Plant
 {
-    protected override void AddPlantToInventory(PlayerFarming playerFarming)
+    protected override void AddPlantToInventory(PlantsInventory plantsInventory)
     {
-        PlayerPlantsInventory.PotatoCount = 1;
+        plantsInventory.PotatoCount = 1;
     }
 }

@@ -14,8 +14,8 @@ public abstract class Plant : MonoBehaviour
     private bool _canSet;
     private bool _canGet;
 
-    protected PlayerFarming _playerFarming;
-    protected WorkerFarming _workerFarming;
+    protected PlayerPlantsInventory _playerPlantsInventory;
+    protected WorkerPlantsInventory _workerPlantsInventory;
     protected bool _playerIsHere;
     protected bool _workerIsHere;
 
@@ -41,15 +41,18 @@ public abstract class Plant : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out PlayerFarming playerFarming))
+        if (other.TryGetComponent(out PlayerPlantsInventory playerPlantsInventory))
         {
-            if (other.TryGetComponent(out WorkerFarming workerFarming))
-                _workerFarming = workerFarming;
-            else
-                _playerFarming = playerFarming;
+            _playerPlantsInventory = playerPlantsInventory;
         }
+
+        if (other.TryGetComponent(out WorkerPlantsInventory workerPlantsInventory))
+        {
+            _workerPlantsInventory = workerPlantsInventory;
+        }
+
     }
-    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent(out PlayerFarming playerFarming))
@@ -68,13 +71,21 @@ public abstract class Plant : MonoBehaviour
             if (other.TryGetComponent(out WorkerFarming workerFarming))
             {
                 _workerIsHere = false;
-                _workerFarming = null;
             }
             else
             {
                 _playerIsHere = false;
-                _playerFarming = null;
             }
+        }
+
+        if (other.TryGetComponent(out PlayerPlantsInventory playerPlantsInventory))
+        {
+            _playerPlantsInventory = null;
+        }
+
+        if (other.TryGetComponent(out WorkerPlantsInventory workerPlantsInventory))
+        {
+            _workerPlantsInventory = null;
         }
     }
 
@@ -126,15 +137,15 @@ public abstract class Plant : MonoBehaviour
             transform.localScale = Vector3.zero;
 
             if (_workerIsHere)
-                AddPlantToInventory(_workerFarming);
+                AddPlantToInventory(_workerPlantsInventory);
             else if (_playerIsHere)
-                AddPlantToInventory(_playerFarming);
+                AddPlantToInventory(_playerPlantsInventory);
 
             OnPlantGet?.Invoke();
         }
     }
 
-    protected abstract void AddPlantToInventory(PlayerFarming playerFarming);
+    protected abstract void AddPlantToInventory(PlantsInventory plantsInventory);
 
     private void Grow()
     {

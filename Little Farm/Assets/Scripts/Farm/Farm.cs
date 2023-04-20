@@ -58,7 +58,6 @@ public class Farm : MonoBehaviour
             else 
                 _playerIsHere = true;
         }
-
     }
 
     private void OnTriggerExit(Collider other)

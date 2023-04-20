@@ -222,6 +222,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellPotatoAD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &530869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +472,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89892
+  m_Name: pb_Mesh86918
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -772,6 +784,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5984ae62a68c44e81dcef47adc3aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wheatCountText:
+  - {fileID: 1486731232}
+  - {fileID: 1556652027}
+  - {fileID: 1400454725}
+  - {fileID: 2084685720}
+  _carrotCountText:
+  - {fileID: 142457828}
+  - {fileID: 200298412}
+  - {fileID: 341696074}
+  - {fileID: 1280873708}
+  _radishCountText:
+  - {fileID: 2056880225}
+  - {fileID: 1379758358}
+  - {fileID: 1683329417}
+  - {fileID: 1831276421}
+  _potatoCountText:
+  - {fileID: 1766884848}
+  - {fileID: 1788772587}
+  - {fileID: 341770881}
+  - {fileID: 1074405918}
 --- !u!1001 &22537369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -875,7 +907,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89878
+  m_Name: pb_Mesh89862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1420,7 +1452,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2364
+  m_Name: pb_Mesh92884
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1631,7 +1663,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7482
+  m_Name: pb_Mesh89328
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2131,7 +2163,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-70910
+  m_Name: pb_Mesh87540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2377,6 +2409,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellRadish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2758,7 +2802,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2176
+  m_Name: pb_Mesh94052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3411,7 +3455,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26780
+  m_Name: pb_Mesh91976
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3790,13 +3834,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellCarrot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!43 &154315289
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4400
+  m_Name: pb_Mesh86612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4085,7 +4141,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3842
+  m_Name: pb_Mesh89258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4350,13 +4406,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellAll
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!43 &170496874
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2970
+  m_Name: pb_Mesh94610
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5235,7 +5303,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1350
+  m_Name: pb_Mesh91694
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5577,7 +5645,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1244
+  m_Name: pb_Mesh86378
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6443,7 +6511,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7448
+  m_Name: pb_Mesh84976
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6717,7 +6785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5704
+  m_Name: pb_Mesh93206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7586,7 +7654,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4224
+  m_Name: pb_Mesh93452
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7760,7 +7828,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1304
+  m_Name: pb_Mesh89186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8117,7 +8185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.49646, y: -16.03833}
+  m_AnchoredPosition: {x: 15.1, y: -16.03833}
   m_SizeDelta: {x: 16.767395, y: 16.767334}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &349846920
@@ -8362,6 +8430,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellRadishAD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8721,6 +8801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfPathHorizontal
       objectReference: {fileID: 0}
+    - target: {fileID: 7654719027344420587, guid: aa00e62716376d343a54b58b6e4f707f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa00e62716376d343a54b58b6e4f707f, type: 3}
 --- !u!4 &368096464 stripped
@@ -8955,7 +9039,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4848
+  m_Name: pb_Mesh89614
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9169,7 +9253,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1450
+  m_Name: pb_Mesh90126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9343,7 +9427,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-84192
+  m_Name: pb_Mesh91066
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9544,7 +9628,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2320
+  m_Name: pb_Mesh86480
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9755,7 +9839,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3012
+  m_Name: pb_Mesh90396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10643,7 +10727,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5418
+  m_Name: pb_Mesh87270
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10987,7 +11071,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1500
+  m_Name: pb_Mesh85290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11212,7 +11296,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4938
+  m_Name: pb_Mesh90424
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11386,7 +11470,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5664
+  m_Name: pb_Mesh85784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11893,7 +11977,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25446
+  m_Name: pb_Mesh86330
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12300,7 +12384,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5546
+  m_Name: pb_Mesh84736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12474,7 +12558,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-51740
+  m_Name: pb_Mesh86888
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13209,7 +13293,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2020
+  m_Name: pb_Mesh93590
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13409,7 +13493,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1404
+  m_Name: pb_Mesh92852
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14209,7 +14293,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &661213909
 Transform:
@@ -14271,7 +14355,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2264
+  m_Name: pb_Mesh87342
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14614,6 +14698,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellAll
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &698505199
 GameObject:
   m_ObjectHideFlags: 0
@@ -14919,6 +15015,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellWheat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15745,7 +15853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7024
+  m_Name: pb_Mesh94064
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16255,7 +16363,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4420
+  m_Name: pb_Mesh93334
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17072,7 +17180,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5378
+  m_Name: pb_Mesh88220
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17246,7 +17354,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7038
+  m_Name: pb_Mesh86830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17447,7 +17555,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5346
+  m_Name: pb_Mesh85276
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17627,7 +17735,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89864
+  m_Name: pb_Mesh94746
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19541,6 +19649,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellAll
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &900056412
 GameObject:
   m_ObjectHideFlags: 0
@@ -19623,7 +19743,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2084
+  m_Name: pb_Mesh92910
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19834,7 +19954,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2462
+  m_Name: pb_Mesh87854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19998,7 +20118,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6234
+  m_Name: pb_Mesh88484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20277,7 +20397,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1284
+  m_Name: pb_Mesh88256
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20681,7 +20801,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89850
+  m_Name: pb_Mesh85582
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21128,6 +21248,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellWheat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22293,7 +22425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5, y: -22}
+  m_AnchoredPosition: {x: 21.5, y: -21.5}
   m_SizeDelta: {x: 24, y: 23}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1049310547
@@ -22402,7 +22534,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1936
+  m_Name: pb_Mesh91010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22576,7 +22708,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2130
+  m_Name: pb_Mesh91110
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22868,7 +23000,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-70892
+  m_Name: pb_Mesh91368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23169,7 +23301,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2302
+  m_Name: pb_Mesh84506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24142,7 +24274,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5632
+  m_Name: pb_Mesh85262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25191,7 +25323,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25876
+  m_Name: pb_Mesh87974
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25947,7 +26079,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5718
+  m_Name: pb_Mesh89736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26346,6 +26478,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellWheatAD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27112,7 +27256,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1980
+  m_Name: pb_Mesh84522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28014,7 +28158,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1554
+  m_Name: pb_Mesh91932
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28188,7 +28332,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25090
+  m_Name: pb_Mesh84630
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28381,7 +28525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3, y: -15}
+  m_AnchoredPosition: {x: 12.1, y: -15}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1346659329
@@ -28977,6 +29121,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellAll
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1397969354
 GameObject:
   m_ObjectHideFlags: 0
@@ -29231,7 +29387,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3368
+  m_Name: pb_Mesh85416
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29616,7 +29772,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7462
+  m_Name: pb_Mesh93668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29780,7 +29936,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3796
+  m_Name: pb_Mesh89670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30224,7 +30380,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5360
+  m_Name: pb_Mesh88780
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30905,7 +31061,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2924
+  m_Name: pb_Mesh90098
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31548,7 +31704,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10466
+  m_Name: pb_Mesh87258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31603,9 +31759,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -31638,8 +31794,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 000040c0000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bf00004040000000bff0ffffbe000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e000000bf000040c008c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bf0000404008c3d2bef0ffffbe08c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e08c3d2bef0ffffbe000000bf0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f000000bff0ffffbe000000bf000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf000000bff0ffffbe08c3d2be0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f08c3d2bef0ffffbe08c3d2be000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf08c3d2bef0ffffbe000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe000000bf000040c0000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c0000000bff0ffffbe08c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe08c3d2be000040c008c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c008c3d2be000040c0000000bf000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f000000bf000040c0000000bf0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf000000bf000040c008c3d2be000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f08c3d2be000040c008c3d2be0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf08c3d2be000040c008c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bf000040c00000403ff0ffffbe08c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bff0ffffbe0000403f000040c008c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bf000040c0000040bff0ffffbe08c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bff0ffffbe000040bf000040c0000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bf00004040000040bff0ffffbe000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e000040bf000040c0000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bf000040400000403ff0ffffbe000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e0000403f
+    m_DataSize: 1344
+    _typelessdata: 000040c0000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bf00004040000000bf0bd7a33c0bd7a33cf0ffffbe000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e000000bf89d3273f0bd7a33c000040c008c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bf0000404008c3d2beaad7a33c37ed2d3df0ffffbe08c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e08c3d2be8ed3273f37ed2d3df0ffffbe000000bf0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f000000bf0bd7a33c0238733ff0ffffbe000000bf000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf000000bfce7ccd3e0238733ff0ffffbe08c3d2be0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f08c3d2be4cd7a33c1df8783ff0ffffbe08c3d2be000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf08c3d2bed27ccd3e1df8783ff0ffffbe000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe000000bf0bd7a33cbdd87f3d000040c0000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c0000000bf89d3273fbdd87f3df0ffffbe08c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe08c3d2beaad7a33c37edad3d000040c008c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c008c3d2be8ed3273f37edad3d000040c0000000bf000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f000000bf0bd7a33c2f59683f000040c0000000bf0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf000000bfce7ccd3e2f59683f000040c008c3d2be000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f08c3d2be4cd7a33c4a196e3f000040c008c3d2be0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf08c3d2bed27ccd3e4a196e3f000040c008c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bf000040c00000403f84d3273f1df8f83ef0ffffbe08c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bff0ffffbe0000403f0bd7a33c1df8f83e000040c008c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bf000040c0000040bf88d3273ffae2d63df0ffffbe08c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bff0ffffbe000040bf79d7a33cfae2d63d000040c0000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bf00004040000040bf79d7a33cc79a013ff0ffffbe000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e000040bf88d3273fc79a013f000040c0000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bf000040400000403f0bd7a33c763a633ff0ffffbe000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e0000403f84d3273f763a633f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -31788,7 +31944,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25836
+  m_Name: pb_Mesh87906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32071,7 +32227,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7864
+  m_Name: pb_Mesh88996
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32499,6 +32655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HalfPathHorizontal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7654719027344420587, guid: aa00e62716376d343a54b58b6e4f707f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa00e62716376d343a54b58b6e4f707f, type: 3}
 --- !u!4 &1501873393 stripped
@@ -32544,7 +32704,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4894
+  m_Name: pb_Mesh92144
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33091,7 +33251,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2220
+  m_Name: pb_Mesh94114
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33498,7 +33658,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25890
+  m_Name: pb_Mesh88044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34213,6 +34373,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellWheatAD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35802,7 +35974,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2040
+  m_Name: pb_Mesh85992
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36105,6 +36277,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellPotato
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1701745569
 GameObject:
   m_ObjectHideFlags: 0
@@ -36246,7 +36430,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5592
+  m_Name: pb_Mesh87122
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36632,7 +36816,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4360
+  m_Name: pb_Mesh84082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36806,7 +36990,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7434
+  m_Name: pb_Mesh86234
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37531,7 +37715,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-84178
+  m_Name: pb_Mesh93116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37695,7 +37879,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4270
+  m_Name: pb_Mesh87388
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38397,7 +38581,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4314
+  m_Name: pb_Mesh90796
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38782,7 +38966,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3750
+  m_Name: pb_Mesh85806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38956,7 +39140,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89836
+  m_Name: pb_Mesh85392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39829,7 +40013,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2448
+  m_Name: pb_Mesh87194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40102,8 +40286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 34, y: -21}
-  m_SizeDelta: {x: 68, y: 24}
+  m_AnchoredPosition: {x: 45.5, y: -20.5}
+  m_SizeDelta: {x: 52.5387, y: 24}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1814284852
 MonoBehaviour:
@@ -40458,7 +40642,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5652
+  m_Name: pb_Mesh91094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41249,6 +41433,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellRadish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1851870921
 GameObject:
   m_ObjectHideFlags: 0
@@ -41820,7 +42016,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2408
+  m_Name: pb_Mesh93188
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42146,7 +42342,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6214
+  m_Name: pb_Mesh93846
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42660,6 +42856,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellRadishAD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1912162873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42786,6 +42994,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellCarrot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43066,6 +43286,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellPotatoAD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1932141820
 GameObject:
   m_ObjectHideFlags: 0
@@ -43156,6 +43388,18 @@ MonoBehaviour:
       - m_Target: {fileID: 961523303}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellCarrotAD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43633,6 +43877,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIToEnable:
   - {fileID: 1167715252}
+  - {fileID: 659031473}
+  _wheatPriceText:
+  - {fileID: 2129452824}
+  - {fileID: 1814284852}
+  _carrotPriceText:
+  - {fileID: 2087085136}
+  - {fileID: 775926449}
+  _radishPriceText:
+  - {fileID: 1027534791}
+  - {fileID: 1414541444}
+  _potatoPriceText:
+  - {fileID: 1844188543}
+  - {fileID: 1124531008}
+  _wheatPriceTextAD:
+  - {fileID: 1515314427}
+  - {fileID: 1427938626}
+  _carrotPriceTextAD:
+  - {fileID: 260068087}
+  - {fileID: 1328752282}
+  _radishPriceTextAD:
+  - {fileID: 275195223}
+  - {fileID: 2009516616}
+  _potatoPriceTextAD:
+  - {fileID: 1701745571}
+  - {fileID: 1521307695}
+  _allPrice:
+  - {fileID: 80383241}
+  - {fileID: 533134895}
+  _allPriceAD:
+  - {fileID: 834212768}
+  - {fileID: 1112093367}
   _wheatPrice: 4
   _carrotPrice: 3
   _radishPrice: 2
@@ -43781,7 +44056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11560
+  m_Name: pb_Mesh90258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43836,9 +44111,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -43871,8 +44146,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 000040c0000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bf00004040000000bff0ffffbe000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e000000bf000040c008c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bf0000404008c3d2bef0ffffbe08c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e08c3d2bef0ffffbe000000bf0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f000000bff0ffffbe000000bf000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf000000bff0ffffbe08c3d2be0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f08c3d2bef0ffffbe08c3d2be000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf08c3d2bef0ffffbe000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe000000bf000040c0000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c0000000bff0ffffbe08c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe08c3d2be000040c008c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c008c3d2be000040c0000000bf000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f000000bf000040c0000000bf0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf000000bf000040c008c3d2be000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f08c3d2be000040c008c3d2be0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf08c3d2be000040c008c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bf000040c00000403ff0ffffbe08c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bff0ffffbe0000403f000040c008c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bf000040c0000040bff0ffffbe08c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bff0ffffbe000040bf000040c0000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bf00004040000040bff0ffffbe000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e000040bf000040c0000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bf000040400000403ff0ffffbe000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e0000403f
+    m_DataSize: 1344
+    _typelessdata: 000040c0000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bf00004040000000bf0bd7a33c0bd7a33cf0ffffbe000000bf0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e000000bf89d3273f0bd7a33c000040c008c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bf0000404008c3d2beaad7a33c37ed2d3df0ffffbe08c3d2be0000403f00000000000000000000803f000080bf0000000000000000000080bff0ffff3e08c3d2be8ed3273f37ed2d3df0ffffbe000000bf0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f000000bf0bd7a33c0238733ff0ffffbe000000bf000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf000000bfce7ccd3e0238733ff0ffffbe08c3d2be0000403f0000803f000000000000000000000000000000000000803f000080bf0000403f08c3d2be4cd7a33c1df8783ff0ffffbe08c3d2be000040bf0000803f000000000000000000000000000000000000803f000080bf000040bf08c3d2bed27ccd3e1df8783ff0ffffbe000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe000000bf0bd7a33cbdd87f3d000040c0000000bf000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c0000000bf89d3273fbdd87f3df0ffffbe08c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bff0ffffbe08c3d2beaad7a33c37edad3d000040c008c3d2be000040bf0000000000000000000080bf0000803f0000000000000000000080bf000040c008c3d2be8ed3273f37edad3d000040c0000000bf000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f000000bf0bd7a33c2f59683f000040c0000000bf0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf000000bfce7ccd3e2f59683f000040c008c3d2be000040bf000080bf00000000000000000000000000000000000080bf000080bf0000403f08c3d2be4cd7a33c4a196e3f000040c008c3d2be0000403f000080bf00000000000000000000000000000000000080bf000080bf000040bf08c3d2bed27ccd3e4a196e3f000040c008c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bf000040c00000403f84d3273f1df8f83ef0ffffbe08c3d2be0000403f000000000000803f000000000000803f0000000000000000000080bff0ffffbe0000403f0bd7a33c1df8f83e000040c008c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bf000040c0000040bf88d3273ffae2d63df0ffffbe08c3d2be000040bf000000000000803f000000000000803f0000000000000000000080bff0ffffbe000040bf79d7a33cfae2d63d000040c0000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bf00004040000040bf79d7a33cc79a013ff0ffffbe000000bf000040bf00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e000040bf88d3273fc79a013f000040c0000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bf000040400000403f0bd7a33c763a633ff0ffffbe000000bf0000403f00000000000080bf00000000000080bf0000000000000000000080bff0ffff3e0000403f84d3273f763a633f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -44588,7 +44863,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7058
+  m_Name: pb_Mesh86292
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -44893,6 +45168,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellCarrotAD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2021488578
 GameObject:
   m_ObjectHideFlags: 0
@@ -44975,7 +45262,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2482
+  m_Name: pb_Mesh84544
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45149,7 +45436,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-70878
+  m_Name: pb_Mesh84676
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45480,6 +45767,7 @@ GameObject:
   - component: {fileID: 2035018218}
   - component: {fileID: 2035018217}
   - component: {fileID: 2035018219}
+  - component: {fileID: 2035018220}
   m_Layer: 0
   m_Name: WorkerFarming
   m_TagString: Untagged
@@ -45542,13 +45830,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc15caf1cefc2ee4fbbb664000625be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2035018220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035018215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6755046813dbe4983ec4228ef2f6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &2037721676
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89906
+  m_Name: pb_Mesh92690
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46122,7 +46422,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26444
+  m_Name: pb_Mesh90554
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46736,7 +47036,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4466
+  m_Name: pb_Mesh86186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47001,6 +47301,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1956616135}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: TrySellPotato
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2089705725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47045,7 +47357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2858
+  m_Name: pb_Mesh94298
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47209,7 +47521,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6616
+  m_Name: pb_Mesh87958
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47437,7 +47749,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2880
+  m_Name: pb_Mesh84610
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47835,8 +48147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -15}
-  m_SizeDelta: {x: 48, y: 18}
+  m_AnchoredPosition: {x: 30.1, y: -15}
+  m_SizeDelta: {x: 42.9, y: 18}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2129452824
 MonoBehaviour:
