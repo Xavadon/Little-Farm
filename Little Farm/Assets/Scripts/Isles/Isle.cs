@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Collider))]
 public class Isle : MonoBehaviour
@@ -11,16 +13,27 @@ public class Isle : MonoBehaviour
     [SerializeField] private Canvas _canvas;
     [SerializeField] private TextMeshProUGUI _priceText;
     [SerializeField] private GameObject _gameObjectToEnable;
+    [SerializeField] private Farm _farmToEnable;
+    [SerializeField] private NavMeshAgent _workerToEnable;
+    [SerializeField] private Storage _storageToEnable;
     [SerializeField] private Collider[] _collidersToDisable;
     [SerializeField] private Isle[] _neighbours;
 
-    private bool _isBought;
     private bool _enableGround;
+
+    public bool IsBought { get; private set; }
+
+    public event Action OnIslandBought;
 
     private void Start()
     {
         _canvas.gameObject.SetActive(_enableCanvasOnStart);
         _gameObjectToEnable.transform.localScale = Vector3.zero;
+
+        if (_farmToEnable != null) _farmToEnable.gameObject.SetActive(false);
+        if (_workerToEnable != null) _workerToEnable.gameObject.SetActive(false);
+        if (_storageToEnable != null) _storageToEnable.gameObject.SetActive(false);
+
         if (_priceText.enabled) _priceText.text = _price.ToString();
     }
 
@@ -43,9 +56,14 @@ public class Isle : MonoBehaviour
         {
             playerMoney.DecreaseMoney(_price);
 
-            _isBought = true;
+            IsBought = true;
             _enableGround = true;
             _canvas.gameObject.SetActive(false);
+
+            if (_farmToEnable != null) _farmToEnable.gameObject.SetActive(true);
+            if (_workerToEnable != null) _workerToEnable.gameObject.SetActive(true);
+            if (_storageToEnable != null) _storageToEnable.gameObject.SetActive(true);
+
 
             for (int i = 0; i < _collidersToDisable.Length; i++)
             {
@@ -56,6 +74,8 @@ public class Isle : MonoBehaviour
             {
                 if (_neighbours.Length > 0) _neighbours[i].EnableCanvas();
             }
+
+            OnIslandBought?.Invoke();
         }
     }
 
@@ -77,7 +97,7 @@ public class Isle : MonoBehaviour
 
     public void EnableCanvas()
     {
-        if (!_isBought)
+        if (!IsBought)
         {
             _canvas.gameObject.SetActive(true);
             _priceText.text = _price.ToString();

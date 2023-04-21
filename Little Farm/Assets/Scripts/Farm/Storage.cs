@@ -66,7 +66,7 @@ public class Storage : MonoBehaviour
 
         if (_radishCount > 0) 
         {
-            playerPlantsInventory.CarrotCount = _radishCount;
+            playerPlantsInventory.RadishCount = _radishCount;
             _radishCount = 0;
         }
 

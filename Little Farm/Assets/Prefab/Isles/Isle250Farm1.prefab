@@ -714,6 +714,7 @@ MonoBehaviour:
   _canvas: {fileID: 6040808710330449534}
   _priceText: {fileID: 6040808710700145336}
   _gameObjectToEnable: {fileID: 6040808709881013920}
+  _farmToEnable: {fileID: 6040808709435439490}
   _collidersToDisable:
   - {fileID: 467955841217548625}
   - {fileID: 467955841217548630}
@@ -751,6 +752,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6040808709881013934}
     m_Modifications:
+    - target: {fileID: 601674647379886197, guid: 797ba6aeeeb30b24eb630f44722de0a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929467358453551376, guid: 797ba6aeeeb30b24eb630f44722de0a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2812970956499675749, guid: 797ba6aeeeb30b24eb630f44722de0a6, type: 3}
       propertyPath: m_Name
       value: PotatoFarm
@@ -801,6 +810,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797ba6aeeeb30b24eb630f44722de0a6, type: 3}
+--- !u!114 &6040808709435439490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2812970956618576235, guid: 797ba6aeeeb30b24eb630f44722de0a6, type: 3}
+  m_PrefabInstance: {fileID: 8420866719442110697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8326aaea9390b974b878e87edfca5959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6040808709435439491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2812970956618576234, guid: 797ba6aeeeb30b24eb630f44722de0a6, type: 3}

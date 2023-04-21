@@ -129,6 +129,7 @@ MonoBehaviour:
   _canvas: {fileID: 3681376458588894630}
   _priceText: {fileID: 3681376458038141620}
   _gameObjectToEnable: {fileID: 3681376458760567504}
+  _farmToEnable: {fileID: 6429278147593194500}
   _collidersToDisable:
   - {fileID: 7403109361965656125}
   - {fileID: 7403109361965656126}
@@ -751,6 +752,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3681376458760567514}
     m_Modifications:
+    - target: {fileID: 2890103004855409075, guid: ee19e4f4f5071d64999e1b58a0d0100a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148525971491581268, guid: ee19e4f4f5071d64999e1b58a0d0100a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5967718204019013594, guid: ee19e4f4f5071d64999e1b58a0d0100a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -801,6 +810,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee19e4f4f5071d64999e1b58a0d0100a, type: 3}
+--- !u!114 &6429278147593194500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5967718204019013595, guid: ee19e4f4f5071d64999e1b58a0d0100a, type: 3}
+  m_PrefabInstance: {fileID: 858211155659078623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8326aaea9390b974b878e87edfca5959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6429278147593194501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5967718204019013594, guid: ee19e4f4f5071d64999e1b58a0d0100a, type: 3}

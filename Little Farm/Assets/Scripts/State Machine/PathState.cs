@@ -14,7 +14,7 @@ public class PathState : State
     [SerializeField] private Transform _mainTransform;
 
     [Space(height: 10)]
-    [SerializeField] private Transform[] _wayPoints;
+    [SerializeField] private Storage _wayPoint;
     [SerializeField] private float _moveSpeed = 2f;
     [SerializeField] private float _waitBeforeMove = 2f;
     [SerializeField] private float _stoppingDistance = 0.5f;
@@ -43,13 +43,23 @@ public class PathState : State
 
     private void MoveToWayPoint()
     {
-        if (_wayPoints.Length == 0) return;
-        else if (_wayPoints[0] == null) return;
+        if (_wayPoint == null) return;
+
+        if (!_wayPoint.gameObject.activeSelf)
+        {
+            _canMove = false;
+            _animatorHandler.animator.SetBool("IsMoving", _canMove);
+        }
+        else
+        {
+            _canMove = true;
+            _animatorHandler.animator.SetBool("IsMoving", _canMove);
+        }
 
         if (_canMove)
-            _navMeshAgent.SetDestination(_wayPoints[_currentWayPoint].transform.position);
+            _navMeshAgent.SetDestination(_wayPoint.transform.position);
 
-        if (Vector3.Distance(_mainTransform.position, _wayPoints[_currentWayPoint].transform.position) <= _navMeshAgent.stoppingDistance)
+        if (Vector3.Distance(_mainTransform.position, _wayPoint.transform.position) <= _navMeshAgent.stoppingDistance)
         {
             _nextState = true;
             StartCoroutine(WaitBeforeMove());

@@ -53,6 +53,7 @@ MonoBehaviour:
   _canvas: {fileID: 120443140059431904}
   _priceText: {fileID: 120443140574565618}
   _gameObjectToEnable: {fileID: 120443140223372438}
+  _farmToEnable: {fileID: 1038373214893954906}
   _collidersToDisable:
   - {fileID: 6052880481523457659}
   - {fileID: 6052880481523457656}
@@ -751,6 +752,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 120443140223372444}
     m_Modifications:
+    - target: {fileID: 1635983739626813558, guid: a3b5967d8a4c1c648afec0f79ee68d43, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6019579919549877103, guid: a3b5967d8a4c1c648afec0f79ee68d43, type: 3}
       propertyPath: m_Name
       value: RadishFarm (1)
@@ -799,8 +804,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8259868216978443225, guid: a3b5967d8a4c1c648afec0f79ee68d43, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b5967d8a4c1c648afec0f79ee68d43, type: 3}
+--- !u!114 &1038373214893954906 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6019579919665893473, guid: a3b5967d8a4c1c648afec0f79ee68d43, type: 3}
+  m_PrefabInstance: {fileID: 6764638520272897851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8326aaea9390b974b878e87edfca5959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1038373214893954907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6019579919665893472, guid: a3b5967d8a4c1c648afec0f79ee68d43, type: 3}

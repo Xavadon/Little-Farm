@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class PlayerFarming : MonoBehaviour
 {
     [SerializeField] protected AnimatorHandler _animatorHandler;
-    [SerializeField] private Button[] _setPlantsButton;
-    [SerializeField] private Button[] _getPlantsButton;
+    [SerializeField] protected Button[] _setPlantsButton;
+    [SerializeField] protected Button[] _getPlantsButton;
 
     protected List<Plant> _fruits = new List<Plant>(0);
-    private bool _canSet;
-    private bool _canGet;
+    protected bool _canSet;
+    protected bool _canGet;
     protected int _indexUI;
 
     protected void Start()

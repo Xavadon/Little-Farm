@@ -136,10 +136,10 @@ public abstract class Plant : MonoBehaviour
             IsGet = true;
             transform.localScale = Vector3.zero;
 
-            if (_workerIsHere)
-                AddPlantToInventory(_workerPlantsInventory);
-            else if (_playerIsHere)
+            if (_playerIsHere)
                 AddPlantToInventory(_playerPlantsInventory);
+            else if (_workerIsHere)
+                AddPlantToInventory(_workerPlantsInventory);
 
             OnPlantGet?.Invoke();
         }
