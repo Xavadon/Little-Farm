@@ -7,11 +7,11 @@ public class DeviceSceneLoader : MonoBehaviour
 {
     private void Start()
     {
-        switch (YandexSDK.YaSDK.instance.currentPlatform)
+        switch (YG.YandexGame.EnvironmentData.deviceType)
         {
-            case YandexSDK.Platform.desktop:
+            case "desktop":
                 break;
-            case YandexSDK.Platform.phone:
+            case "mobile":
                 SceneManager.LoadScene(1);
                 break;
             default:

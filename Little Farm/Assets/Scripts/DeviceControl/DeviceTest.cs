@@ -8,7 +8,6 @@ public class DeviceTest : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(YandexSDK.YaSDK.instance.currentPlatform);
-        _device.text = YandexSDK.YaSDK.instance.currentPlatform.ToString();
+        _device.text = YG.YandexGame.EnvironmentData.deviceType.ToString();
     }
 }

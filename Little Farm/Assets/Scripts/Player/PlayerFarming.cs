@@ -15,11 +15,6 @@ public class PlayerFarming : MonoBehaviour
     protected bool _canGet;
     protected int _indexUI;
 
-    protected void Start()
-    {
-        StartCoroutine(InteractWithPlants());
-        GetUI();
-    }
 
     protected void OnTriggerEnter(Collider other)
     {
@@ -57,21 +52,15 @@ public class PlayerFarming : MonoBehaviour
             if (_setPlantsButton.Length > 0) _getPlantsButton[_indexUI].onClick.RemoveListener(farm.GetPlants);
         }
     }
-
-    protected void GetUI()
+    protected void Start()
     {
-        switch (YandexSDK.YaSDK.instance.currentPlatform)
-        {
-            case YandexSDK.Platform.desktop:
-                _indexUI = 0;
-                break;
-            case YandexSDK.Platform.phone:
-                _indexUI = 1;
-                break;
-            default:
-                _indexUI = 1;
-                break;
-        }
+        StartCoroutine(InteractWithPlants());
+    }
+
+    private void Update()
+    {
+        if (!DeviceUIController.UIGet)
+            _indexUI = DeviceUIController.IndexUI;
     }
 
     protected virtual IEnumerator InteractWithPlants()

@@ -23,21 +23,19 @@ public class PlayerMoney : MonoBehaviour
 
     private void Start()
     {
-        switch (YandexSDK.YaSDK.instance.currentPlatform)
-        {
-            case YandexSDK.Platform.desktop:
-                _indexUI = 0;
-                break;
-            case YandexSDK.Platform.phone:
-                _indexUI = 1;
-                break;
-            default:
-                _indexUI = 1;
-                break;
-        }
-
         if (_moneyText.Length > 0)
-            _moneyText[_indexUI].text = "0";
+        {
+            for (int i = 0; i < _moneyText.Length; i++)
+            {
+                _moneyText[i].text = "0";
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (!DeviceUIController.UIGet)
+            _indexUI = DeviceUIController.IndexUI;
     }
 
     private void IncreaseMoney(int value)

@@ -59,9 +59,10 @@ public class Shop : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Update()
     {
-        SetUI();
+        if (!DeviceUIController.UIGet)
+            _indexUI = DeviceUIController.IndexUI;
     }
 
     private void UpdatePrices()
@@ -101,23 +102,6 @@ public class Shop : MonoBehaviour
         }
     }
 
-    private void SetUI()
-    {
-        switch (YandexSDK.YaSDK.instance.currentPlatform)
-        {
-            case YandexSDK.Platform.desktop:
-                _indexUI = 0;
-                break;
-            case YandexSDK.Platform.phone:
-                _indexUI = 1;
-                break;
-            default:
-                _indexUI = 1;
-                break;
-        }
-
-        UIToEnable[_indexUI].SetActive(false);
-    }
 
     public void TrySellWheat()
     {
@@ -137,7 +121,7 @@ public class Shop : MonoBehaviour
         
         if (_wheat > 0)
         {
-            YandexSDK.YaSDK.instance.ShowRewarded("1");
+            YG.YandexGame.Instance._RewardedShow(0);
             OnSell?.Invoke(_wheat * _wheatPrice * 2);
             _playerPlantsInventory.WheatCount = -_wheat;
             UpdatePrices();
@@ -162,7 +146,7 @@ public class Shop : MonoBehaviour
         
         if (_carrot > 0)
         {
-            YandexSDK.YaSDK.instance.ShowRewarded("1");
+            YG.YandexGame.Instance._RewardedShow(0);
             OnSell?.Invoke(_carrot * _carrotPrice * 2);
             _playerPlantsInventory.CarrotCount = -_carrot;
             UpdatePrices();
@@ -187,7 +171,7 @@ public class Shop : MonoBehaviour
 
         if (_radish > 0)
         {
-            YandexSDK.YaSDK.instance.ShowRewarded("1");
+            YG.YandexGame.Instance._RewardedShow(0);
             OnSell?.Invoke(_radish * _radishPrice * 2);
             _playerPlantsInventory.RadishCount = -_radish;
             UpdatePrices();
@@ -212,7 +196,7 @@ public class Shop : MonoBehaviour
 
         if (_potato > 0)
         {
-            YandexSDK.YaSDK.instance.ShowRewarded("1");
+            YG.YandexGame.Instance._RewardedShow(0);
             OnSell?.Invoke(_potato * _potatoPrice * 2);
             _playerPlantsInventory.PotatoCount = -_potato;
             UpdatePrices();
@@ -237,7 +221,7 @@ public class Shop : MonoBehaviour
 
             if (ad)
             {
-                YandexSDK.YaSDK.instance.ShowRewarded("1");
+                YG.YandexGame.Instance._RewardedShow(0);
                 price *= 2;
             }
 

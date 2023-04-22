@@ -11,21 +11,68 @@ public class DeviceUIController : MonoBehaviour
     [SerializeField] private Canvas _desktopUI;
     [SerializeField] private Canvas _phoneUI;
 
+    private WaitForSeconds _wait;
+    private WaitForSeconds _waitCounter;
+    private int _counter;
+
+    public static int IndexUI;
+    public static bool UIGet;
+
     private void Start()
     {
-        switch (YandexSDK.YaSDK.instance.currentPlatform)
+        _wait = new WaitForSeconds(0.1f);
+        _waitCounter = new WaitForSeconds(1);
+        StartCoroutine(GetUI());
+        StartCoroutine(Counter());
+    }
+
+    private IEnumerator GetUI()
+    {
+        switch (YG.YandexGame.EnvironmentData.deviceType)
         {
-            case YandexSDK.Platform.desktop:
+            case "desktop":
                 _desktopUI.gameObject.SetActive(true);
+                _phoneUI.gameObject.SetActive(false);
                 _text.text = "Desktop";
+                IndexUI = 0;
                 break;
-            case YandexSDK.Platform.phone:
+            case "mobile":
+                _desktopUI.gameObject.SetActive(false);
                 _phoneUI.gameObject.SetActive(true);
                 _text.text = "Mobile";
+                IndexUI = 1;
                 break;
             default:
+                _desktopUI.gameObject.SetActive(false);
                 _phoneUI.gameObject.SetActive(true);
                 _text.text = "Mobile";
+                IndexUI = 1;
                 break;
         }
-    }}
+
+        if (_counter > 3)
+            StopCoroutine(GetUI());
+        else
+        {
+            yield return _wait;
+            StartCoroutine(GetUI());
+            _counter++;
+            Debug.Log($"{gameObject.name} device: {YG.YandexGame.EnvironmentData.deviceType}");
+        }
+    }
+
+    private IEnumerator Counter()
+    {
+        if (_counter > 3)
+        {
+            UIGet = true;
+            StopCoroutine(Counter());
+        }
+        else
+        {
+            yield return _waitCounter;
+            _counter++;
+            Debug.Log(_counter);
+        }
+    }
+}

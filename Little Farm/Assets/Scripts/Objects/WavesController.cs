@@ -30,12 +30,12 @@ public class WavesController : MonoBehaviour
 
     private void Start()
     {
-        switch (YandexSDK.YaSDK.instance.currentPlatform)
+        switch (YG.YandexGame.EnvironmentData.deviceType)
         {
-            case YandexSDK.Platform.desktop:
+            case "desktop":
                 _indexUI = 0;
                 break;
-            case YandexSDK.Platform.phone:
+            case "mobile":
                 _indexUI = 1;
                 break;
             default:
