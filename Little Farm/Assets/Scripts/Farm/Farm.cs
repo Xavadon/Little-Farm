@@ -51,9 +51,9 @@ public class Farm : MonoBehaviour
         if (other.TryGetComponent(out Worker worker))
         {
             if (AllGrown)
-            {
                 OnAllPlantsGrown?.Invoke();
-            }
+            if(!AllGet && !AllGrown && !AllSet)
+                AllGet = true;
         }
     }
 

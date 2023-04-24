@@ -67,9 +67,13 @@ public class PlayerFarming : MonoBehaviour
     {
         if (_fruits.Count > 0 && _canSet || _canGet)
         {
-            if (_animatorHandler != null && !_animatorHandler.animator.GetBool("IsAttacking"))
+            if (_animatorHandler != null )
             {
-                _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
+                if (_canSet && !_animatorHandler.animator.GetBool("IsSeeding"))
+                    _animatorHandler.PlayTargetAnimation("Seed", 0.10f, false, true);
+
+                if(_canGet && !_animatorHandler.animator.GetBool("IsAttacking")) 
+                    _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
             }
 
             foreach (var item in _fruits)
@@ -81,7 +85,14 @@ public class PlayerFarming : MonoBehaviour
         else
         {
             if (_animatorHandler != null)
-                _animatorHandler.animator.SetBool("IsAttacking", false);
+            {
+                if (!_canSet)
+                    _animatorHandler.animator.SetBool("IsSeeding", false);
+
+                if(!_canGet)
+                    _animatorHandler.animator.SetBool("IsAttacking", false);
+            }
+
         }
 
         yield return new WaitForSeconds(0.15f);

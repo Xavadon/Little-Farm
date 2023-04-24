@@ -28,6 +28,7 @@ public class WorkerFarming : PlayerFarming
         {
             _fruits.Remove(fruit);
         }
+
         if (other.TryGetComponent(out Farm farm))
         {
             CanGet = false;
@@ -44,12 +45,13 @@ public class WorkerFarming : PlayerFarming
 
         if (_fruits.Count > 0 && CanGet && (_allGet || _allGrown || _firstWave))
         {
-            if (_animatorHandler != null && !_animatorHandler.animator.GetBool("IsAttacking"))
+            if (_animatorHandler != null)
             {
-                if(_allGrown)
+                if(_firstWave && !_allGet && !_animatorHandler.animator.GetBool("IsAttacking"))
                     _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
-                if(_allGet)
-                    _animatorHandler.PlayTargetAnimation("Seed", 0.10f, true);
+
+                if (_firstWave && !_allGrown && !_animatorHandler.animator.GetBool("IsSeeding"))
+                    _animatorHandler.PlayTargetAnimation("Seed", 0.10f, false, true);
             }
 
 
@@ -62,10 +64,13 @@ public class WorkerFarming : PlayerFarming
         else
         {
             if (_animatorHandler != null)
-                _animatorHandler.animator.SetBool("IsAttacking", false);
+            {
+                if (_allGet) _animatorHandler.animator.SetBool("IsAttacking", false);
+                if (_allSet) _animatorHandler.animator.SetBool("IsSeeding", false);
+            }
         }
 
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.35f);
         StartCoroutine(InteractWithPlants());
     }
 

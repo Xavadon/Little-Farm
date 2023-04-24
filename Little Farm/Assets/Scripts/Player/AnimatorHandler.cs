@@ -12,9 +12,10 @@ public class AnimatorHandler : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void PlayTargetAnimation(string name, float time, bool isAttacking = false)
+    public void PlayTargetAnimation(string name, float time, bool isAttacking = false, bool isSeeding = false)
     {
         animator.CrossFade(name, time);
         animator.SetBool("IsAttacking", isAttacking);
+        animator.SetBool("IsSeeding", isSeeding);
     }
 }
