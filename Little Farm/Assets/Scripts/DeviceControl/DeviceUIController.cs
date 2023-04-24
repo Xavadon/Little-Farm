@@ -20,7 +20,7 @@ public class DeviceUIController : MonoBehaviour
 
     private void Start()
     {
-        _wait = new WaitForSeconds(0.1f);
+        _wait = new WaitForSeconds(0.5f);
         _waitCounter = new WaitForSeconds(1);
         StartCoroutine(GetUI());
         StartCoroutine(Counter());
@@ -28,6 +28,15 @@ public class DeviceUIController : MonoBehaviour
 
     private IEnumerator GetUI()
     {
+        if (_counter > 3)
+            StopCoroutine(GetUI());
+        else
+        {
+            yield return _wait;
+            StartCoroutine(GetUI());
+            _counter++;
+        }
+
         switch (YG.YandexGame.EnvironmentData.deviceType)
         {
             case "desktop":
@@ -49,16 +58,6 @@ public class DeviceUIController : MonoBehaviour
                 IndexUI = 1;
                 break;
         }
-
-        if (_counter > 3)
-            StopCoroutine(GetUI());
-        else
-        {
-            yield return _wait;
-            StartCoroutine(GetUI());
-            _counter++;
-            Debug.Log($"{gameObject.name} device: {YG.YandexGame.EnvironmentData.deviceType}");
-        }
     }
 
     private IEnumerator Counter()
@@ -72,7 +71,6 @@ public class DeviceUIController : MonoBehaviour
         {
             yield return _waitCounter;
             _counter++;
-            Debug.Log(_counter);
         }
     }
 }

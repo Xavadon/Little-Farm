@@ -45,7 +45,13 @@ public class WorkerFarming : PlayerFarming
         if (_fruits.Count > 0 && CanGet && (_allGet || _allGrown || _firstWave))
         {
             if (_animatorHandler != null && !_animatorHandler.animator.GetBool("IsAttacking"))
-                _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
+            {
+                if(_allGrown)
+                    _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
+                if(_allGet)
+                    _animatorHandler.PlayTargetAnimation("Seed", 0.10f, true);
+            }
+
 
             foreach (var item in _fruits)
             {

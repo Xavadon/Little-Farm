@@ -68,7 +68,9 @@ public class PlayerFarming : MonoBehaviour
         if (_fruits.Count > 0 && _canSet || _canGet)
         {
             if (_animatorHandler != null && !_animatorHandler.animator.GetBool("IsAttacking"))
+            {
                 _animatorHandler.PlayTargetAnimation("Attack", 0.10f, true);
+            }
 
             foreach (var item in _fruits)
             {

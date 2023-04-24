@@ -854,6 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9e1edb37cb96447900ff491af5b269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _thisIsle: {fileID: 8424287301980315709}
   _price: 0
   _enableCanvasOnStart: 0
   _canvas: {fileID: 8424287300987204391}

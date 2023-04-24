@@ -150,11 +150,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9e1edb37cb96447900ff491af5b269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _thisIsle: {fileID: 8905280970429338848}
   _price: 0
   _enableCanvasOnStart: 0
   _canvas: {fileID: 8905280969398765562}
   _priceText: {fileID: 8905280971409746546}
   _gameObjectToEnable: {fileID: 5718230257091508241}
+  _farmToEnable: {fileID: 0}
+  _workerToEnable: {fileID: 0}
+  _storageToEnable: {fileID: 0}
   _collidersToDisable:
   - {fileID: 8905280970429338850}
   - {fileID: 8905280970429338849}

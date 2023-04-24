@@ -30,11 +30,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         _playerActions.Enable();
+        YG.YandexGame.GetDataEvent += GetLoad;
     }
 
     private void OnDisable()
     {
         _playerActions.Disable();
+        YG.YandexGame.GetDataEvent -= GetLoad;
     }
 
     private void OnMove(InputAction.CallbackContext context)
@@ -52,12 +54,20 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_animator != null) _animator.SetBool("IsMoving", false);
             _isMove = false;
+
+            YG.YandexGame.savesData.playerPosition = transform.position;
         }
     }
 
     private void FixedUpdate()
     {
         Movement();
+    }
+
+    private void GetLoad()
+    {
+        var vector = new Vector3(YG.YandexGame.savesData.playerPosition.x, 3, YG.YandexGame.savesData.playerPosition.z);
+        transform.position = vector;
     }
 
     private void Movement()

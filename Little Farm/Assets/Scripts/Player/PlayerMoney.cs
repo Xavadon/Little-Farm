@@ -7,35 +7,36 @@ public class PlayerMoney : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] _moneyText = new TextMeshProUGUI[2];
 
-    private int _indexUI;
-
     public static int Money { get; private set; }
 
     private void OnEnable()
     {
         Shop.OnSell += IncreaseMoney;
+        YG.YandexGame.GetDataEvent += GetLoad;
     }
 
     private void OnDisable()
     {
         Shop.OnSell -= IncreaseMoney;
+        YG.YandexGame.GetDataEvent -= GetLoad;
     }
 
-    private void Start()
+    private void GetLoad()
     {
-        if (_moneyText.Length > 0)
+        int money = YG.YandexGame.savesData.money;
+        Debug.Log(money);
+
+        if (money >= 0)
         {
-            for (int i = 0; i < _moneyText.Length; i++)
-            {
-                _moneyText[i].text = "0";
-            }
+            Money = money;
+            UpdateUI();
         }
     }
 
-    private void Update()
+    private void SaveProgress()
     {
-        if (!DeviceUIController.UIGet)
-            _indexUI = DeviceUIController.IndexUI;
+        YG.YandexGame.savesData.money = Money;
+        //YG.YandexGame.SaveProgress();
     }
 
     private void IncreaseMoney(int value)
@@ -43,6 +44,7 @@ public class PlayerMoney : MonoBehaviour
         Money += value;
         Debug.Log($"Money: {Money}");
         UpdateUI();
+        SaveProgress();
     }
 
     public void DecreaseMoney(int value)
@@ -52,12 +54,15 @@ public class PlayerMoney : MonoBehaviour
             Money -= value;
             Debug.Log($"Money: {Money}");
             UpdateUI();
+            SaveProgress();
         }
     }
 
     private void UpdateUI()
     {
-        if (_moneyText.Length > 0)
-            _moneyText[_indexUI].text = Money.ToString();
+        for (int i = 0; i < _moneyText.Length; i++)
+        {
+            _moneyText[i].text = Money.ToString();
+        }
     }
 }

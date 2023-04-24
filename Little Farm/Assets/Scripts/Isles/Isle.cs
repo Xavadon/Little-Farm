@@ -8,6 +8,9 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Collider))]
 public class Isle : MonoBehaviour
 {
+    [SerializeField] private Isle _thisIsle;
+
+    [Space(height:10)]
     [SerializeField] private int _price;
     [SerializeField] private bool _enableCanvasOnStart;
     [SerializeField] private Canvas _canvas;
@@ -25,8 +28,22 @@ public class Isle : MonoBehaviour
 
     public event Action OnIslandBought;
 
+    private void OnEnable() => YG.YandexGame.GetDataEvent += GetLoad;
+
+    private void OnDisable() => YG.YandexGame.GetDataEvent -= GetLoad;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.TryGetComponent(out PlayerMoney playerMoney))
+        {
+            TryBuyIsland(playerMoney);
+        }
+    }
+
     private void Start()
     {
+        if (_thisIsle == null) _thisIsle = gameObject.GetComponent<Isle>();
+
         _canvas.gameObject.SetActive(_enableCanvasOnStart);
         _gameObjectToEnable.transform.localScale = Vector3.zero;
 
@@ -37,17 +54,21 @@ public class Isle : MonoBehaviour
         if (_priceText.enabled) _priceText.text = _price.ToString();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.TryGetComponent(out PlayerMoney playerMoney))
-        {
-            TryBuyIsland(playerMoney);
-        }
-    }
-
     private void FixedUpdate()
     {
         if(_enableGround) EnableGround();
+    }
+
+    private void GetLoad()
+    {
+        if (YG.YandexGame.savesData.Isles.Count > 0)
+        {
+            foreach (var item in YG.YandexGame.savesData.Isles)
+            {
+                if (item == _thisIsle)
+                    TryBuyIsland(true);
+            }
+        }
     }
 
     private void TryBuyIsland(PlayerMoney playerMoney)
@@ -55,6 +76,36 @@ public class Isle : MonoBehaviour
         if (PlayerMoney.Money >= _price && _canvas.gameObject.activeSelf)
         {
             playerMoney.DecreaseMoney(_price);
+
+            IsBought = true;
+            _enableGround = true;
+            _canvas.gameObject.SetActive(false);
+
+            if (_farmToEnable != null) _farmToEnable.gameObject.SetActive(true);
+            if (_workerToEnable != null) _workerToEnable.gameObject.SetActive(true);
+            if (_storageToEnable != null) _storageToEnable.gameObject.SetActive(true);
+
+
+            for (int i = 0; i < _collidersToDisable.Length; i++)
+            {
+                _collidersToDisable[i].enabled = false;
+            }
+
+            for (int i = 0; i < _neighbours.Length; i++)
+            {
+                if (_neighbours.Length > 0) _neighbours[i].EnableCanvas();
+            }
+
+            OnIslandBought?.Invoke();
+
+            YG.YandexGame.savesData.Isles.Add(gameObject.GetComponent<Isle>());
+        }
+    }
+
+    private void TryBuyIsland(bool freeBuy = false)
+    {
+        if (freeBuy && _canvas.gameObject.activeSelf)
+        {
 
             IsBought = true;
             _enableGround = true;
